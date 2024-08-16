@@ -1,0 +1,22 @@
+US Dollar, USD
+Dominican Peso, DOM
+Euro, EUR
+Japanese Yen, JPY
+British Pound, GBP
+Australian Dollar, AUD
+Canadian Dollar, CAD
+Swiss Franc, CHF
+Chinese Yuan, CNY
+Swedish Krona, SEK
+New Zealand Dollar, NZD
+Mexican Peso, MXN
+Indian Rupee, INR
+Russian Ruble, RUB
+Brazilian Real, BRL
+South African Rand, ZAR
+Turkish Lira, TRY
+South Korean Won, KRW
+Singapore Dollar, SGD
+Hong Kong Dollar, HKD
+Norwegian Krone, NOK
+Saudi Riyal, SAR

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="459.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <ChoiceBox fx:id="choiceFrom" layoutX="130.0" layoutY="125.0" prefHeight="15.0" prefWidth="220.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <Blend />
+         </effect>
+      </ChoiceBox>
+      <ChoiceBox fx:id="choiceTo" layoutX="130.0" layoutY="164.0" prefHeight="15.0" prefWidth="220.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <Blend />
+         </effect>
+      </ChoiceBox>
+      <Label layoutX="45.0" layoutY="115.0" prefHeight="29.0" prefWidth="65.0" style="-fx-font-family: Arial Narrow;" text="From:">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </Label>
+      <Label layoutX="45.0" layoutY="160.0" prefHeight="10.0" prefWidth="60.0" style="-fx-font-family: Arial Narrow;" text="To:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b64b39" height="30.0" layoutX="90.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="270.0" />
+      <Label fx:id="labelTittle" layoutX="124.0" layoutY="10.0" prefHeight="46.0" prefWidth="210.0" style="-fx-font-family: Arial Narrow;" text="Currency Converter" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <TextField fx:id="valueLabel" layoutX="157.0" layoutY="90.0" prefHeight="25.0" prefWidth="154.0" style="-fx-font-family: Arial Narrow;" />
+      <Label layoutX="179.0" layoutY="70.0" prefHeight="23.0" prefWidth="109.0" style="-fx-font-family: Arial Narrow;" text="Value to convert:">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </Label>
+      <Button fx:id="clearBtn" layoutX="55.0" layoutY="220.0" mnemonicParsing="false" onAction="#clearBtnPressed" prefHeight="40.0" prefWidth="100.0" style="-fx-font-family: Arial Narrow;" text="Clear">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="calculateBtn" layoutX="300.0" layoutY="220.0" mnemonicParsing="false" onAction="#calculateBtnPressed" prefHeight="40.0" prefWidth="100.0" style="-fx-font-family: Arial Narrow;" text="Calculate">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <AnchorPane layoutX="10.0" layoutY="271.0" maxHeight="115.0" maxWidth="440.0" minHeight="115.0" minWidth="440.0" prefHeight="115.0" prefWidth="440.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label fx:id="errorLabel" layoutX="88.0" layoutY="-14.0" prefHeight="92.0" prefWidth="352.0" textFill="RED">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="numericValue" layoutX="88.0" layoutY="-31.0" prefHeight="92.0" prefWidth="352.0" style="-fx-font-family: Arial Narrow;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <VBox layoutX="1.0" layoutY="4.0" prefHeight="110.0" prefWidth="109.0">
+               <children>
+                  <Text fx:id="answerLabel" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial Narrow;" text="Answer:" wrappingWidth="96.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="conversionLabel" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial Narrow;" wrappingWidth="232.88671875">
+                     <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </AnchorPane>
+      <Button fx:id="exchangeBTN" layoutX="350.0" layoutY="132.0" mnemonicParsing="false" onAction="#exchangeBTNpressed" prefHeight="46.0" prefWidth="65.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Icon_19-512.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
